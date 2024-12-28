@@ -49,7 +49,7 @@ const HomeScreen = () => {
       <View className="p-4 bg-white">
   
         <Text className="text-2xl font-bold text-gray-800 mb-2">
-          Hello, {userEmail || "Guest"}!
+          Hello, <Text className="text-xl font-bold text-gray-800 mb-2"> {"\n"}{userEmail || "Guest"}! </Text>
         </Text>
         <TextInput
           className="bg-white mt-6 p-3 rounded-lg text-gray-700 border border-black"
