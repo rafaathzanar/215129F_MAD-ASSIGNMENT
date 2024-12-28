@@ -44,7 +44,11 @@ const HomeScreen = () => {
           onChangeText={setSearchQuery}
         />
        
-        <TouchableOpacity
+        
+      </View>
+      <View>
+      <Text className=" p-4 text-2xl font-bold text-gray-800 mb-2">Favorites Count : </Text>
+      <TouchableOpacity
           style={{
             position: "absolute",
             right: 16,
@@ -61,7 +65,7 @@ const HomeScreen = () => {
             {favoritesCount} <Ionicons name="heart" size={16} color="white" />
           </Text>
         </TouchableOpacity>
-      </View>
+        </View>
 
       <ScrollView>
        
