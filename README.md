@@ -1,10 +1,22 @@
-Here’s a `README.md` file for your project. It includes an overview, setup instructions, features, and a guide to run the app.
-
----
 
 ## **Cricket Venues App**
 
 A React Native application built with Expo, providing a list of cricket venues with search functionality, favorite management, and user authentication using Firebase.
+
+---
+### **Screenshots**
+
+### Onboarding Screen
+![Home Screen](./assets/screenshots/screenshot1.jpg)
+
+### Home Screen
+![Home Screen](./assets/screenshots/screenshot4.jpg)
+
+### Sign In Screen
+![Sign In Screen](./assets/screenshots/screenshot2.jpg)
+
+### Sign Up Screen
+![Sign Up Screen](./assets/screenshots/screenshot3.jpg)
 
 ---
 
@@ -112,22 +124,5 @@ A React Native application built with Expo, providing a list of cricket venues w
 
 ---
 
-### **Screenshots**
 
-### Onboarding Screen
-![Home Screen](./assets/screenshots/screenshot1.jpg)
 
-### Home Screen
-![Home Screen](./assets/screenshots/screenshot4.jpg)
-
-### Sign In Screen
-![Sign In Screen](./assets/screenshots/screenshot2.jpg)
-
-### Sign Up Screen
-![Sign Up Screen](./assets/screenshots/screenshot3.jpg)
-
----
-
-### **License**
-
-This project is licensed under the MIT License.
