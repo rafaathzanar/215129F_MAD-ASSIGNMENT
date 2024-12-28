@@ -14,7 +14,7 @@ const HomeScreen = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.data) {
-          setVenues(data.data.slice(0, 20)); // Limit to 20 venues
+          setVenues(data.data.slice(0, 20));
         } else {
           Alert.alert("No venues found.");
         }
@@ -33,7 +33,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      {/* Header and Search */}
+     
       <View className="p-4 bg-white">
         <Text className="text-2xl font-bold text-gray-800 mb-2">Hello, Mohammed!</Text>
         <TextInput
@@ -43,7 +43,7 @@ const HomeScreen = () => {
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
-        {/* Floating Button */}
+       
         <TouchableOpacity
           style={{
             position: "absolute",
@@ -64,7 +64,7 @@ const HomeScreen = () => {
       </View>
 
       <ScrollView>
-        {/* Venue Cards */}
+       
         <View className="mt-4 px-4">
           <Text className="text-lg font-bold text-gray-800 mb-2">Venues</Text>
           {filteredVenues.map((venue) => (
