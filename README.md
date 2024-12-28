@@ -1,50 +1,133 @@
-# Welcome to your Expo app 👋
+Here’s a `README.md` file for your project. It includes an overview, setup instructions, features, and a guide to run the app.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+## **Cricket Venues App**
 
-1. Install dependencies
+A React Native application built with Expo, providing a list of cricket venues with search functionality, favorite management, and user authentication using Firebase.
 
+---
+
+### **Features**
+
+- **User Authentication**:
+  - Firebase Authentication for sign-up and sign-in.
+  - Personalized greeting with the user's email.
+- **Venue Listing**:
+  - Fetches cricket venues from the SportMonks API.
+  - Search functionality by venue name or city.
+- **Favorites Management**:
+  - Add venues to favorites with a floating button displaying the total count.
+- **Responsive Design**:
+  - Optimized for both iOS and Android devices.
+
+---
+
+### **Prerequisites**
+
+- Node.js and npm installed.
+- Expo CLI installed globally (`npm install -g expo-cli`).
+- Firebase project set up. (Follow [Firebase setup](https://firebase.google.com/docs) to configure.)
+
+---
+
+### **Installation**
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/cricket-venues-app.git
+   cd cricket-venues-app
+   ```
+
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Set Up Firebase**:
+   - Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+   - Enable **Email/Password Authentication** under **Authentication**.
+   - Copy your Firebase configuration and paste it into the `firebase.js` file:
+     ```javascript
+     import { initializeApp } from "firebase/app";
+     import { getAuth } from "firebase/auth";
 
+     const firebaseConfig = {
+       apiKey: "YOUR_API_KEY",
+       authDomain: "YOUR_AUTH_DOMAIN",
+       projectId: "YOUR_PROJECT_ID",
+       storageBucket: "YOUR_STORAGE_BUCKET",
+       messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+       appId: "YOUR_APP_ID",
+     };
+
+     const app = initializeApp(firebaseConfig);
+     export const auth = getAuth(app);
+     ```
+
+4. **Add API Token**:
+   - Replace `YOUR_API_TOKEN` in the API URL with your SportMonks API token in `HomeScreen.js`:
+     ```javascript
+     const API_URL = "https://cricket.sportmonks.com/api/v2.0/venues?api_token=YOUR_API_TOKEN";
+     ```
+
+5. **Run the App**:
    ```bash
-    npx expo start
+   expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### **Usage**
 
-## Get a fresh project
+1. **Sign Up / Sign In**:
+   - Navigate to the sign-up or sign-in screen.
+   - Use your email and password to create an account or log in.
 
-When you're ready, run:
+2. **View Venues**:
+   - Browse the list of cricket venues.
+   - Use the search bar to filter venues by name or city.
 
-```bash
-npm run reset-project
-```
+3. **Manage Favorites**:
+   - Click the heart icon on a venue card to add it to favorites.
+   - View the total count of favorites in the floating button.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### **Technologies Used**
 
-To learn more about developing your project with Expo, look at the following resources:
+- **React Native**: Framework for building mobile apps.
+- **Expo**: Development toolchain for React Native.
+- **Firebase**: Backend for user authentication.
+- **SportMonks API**: Data source for cricket venues.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+### **API Reference**
 
-Join our community of developers creating universal apps.
+- **SportMonks API**:
+  - URL: `https://cricket.sportmonks.com/api/v2.0/venues`
+  - Authentication: Use the API token provided by SportMonks.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+### **Screenshots**
+
+### Onboarding Screen
+![Home Screen](./assets/screenshots/screenshot1.jpg)
+
+### Home Screen
+![Home Screen](./assets/screenshots/screenshot4.jpg)
+
+### Sign In Screen
+![Sign In Screen](./assets/screenshots/screenshot2.jpg)
+
+### Sign Up Screen
+![Sign Up Screen](./assets/screenshots/screenshot3.jpg)
+
+---
+
+### **License**
+
+This project is licensed under the MIT License.
